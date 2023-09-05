@@ -10,8 +10,143 @@
     <title>Nike Project</title>
   </head>
   <body>
-    <main>
-      <!-- section 3: Our Popular Products -->
+    <main class="relative container mx-auto pt-10">
+      <!-- header section start -->
+      <header class="absolute z-10 w-full">
+        <nav class="">
+          <div
+            class="flex justify-between items-center px-[8%] lg:px-0 lg:px-[10%]"
+          >
+            <!-- nav left side content -->
+            <div>
+              <img src="Assets/images/header-logo.svg" alt="Nike Logo" />
+            </div>
+            <!-- nav right side content -->
+            <div class="lg:hidden">
+              <img
+                class="w-[2rem]"
+                src="Assets/icons/hamburger.svg"
+                alt="hamburger menu"
+              />
+            </div>
+            <div class="hidden lg:block">
+              <ul class="flex items-center gap-10">
+                <li>
+                  <a
+                    class="hover:text-blue-600 text-[#797B79] font-normal text-[20px]"
+                    href="#home"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-blue-600 text-[#797B79] font-normal text-[20px]"
+                    href="#popular-products"
+                    >Products</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-blue-600 text-[#797B79] font-normal text-[20px]"
+                    href="#special-offers"
+                    >Offers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-blue-600 text-[#797B79] font-normal text-[20px]"
+                    href="#about-us"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-blue-600 text-[#797B79] font-normal text-[20px]"
+                    href="#contact-us"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- header section end -->
+
+      <!-- hero section star -->
+      <section class="w-full flex flex-col gap-10 mb-10">
+        <!-- hero left side content -->
+        <div class="lg:space-y-10 lg:mt-32 mt-20 pl-[10%] h-screen">
+          <p class="text-[#FF6452] font-normal text-[1.25rem]">
+            Our Summer collections
+          </p>
+          <div class="bg-white lg:max-w-[40vw]">
+            <h1
+              class="lg:text-[6rem] text-[4rem] lg:leading-[6.875rem] font-bold"
+            >
+              The New Arrival<br />
+              <span class="text-[#FF6452]">Nike</span> Shoes
+            </h1>
+          </div>
+          <p
+            class="text-gray-400 font-normal text-[1.25rem] lg:mt-12 lg:max-w-sm max-w-xs my-5"
+          >
+            Discover stylish Nike arrivals, quality comfort, and innovation for
+            your active life
+          </p>
+          <button
+            class="rounded-full bg-[#FF6452] text-white px-8 py-3 flex justify-center items-center gap-5 font-medium text-[1.25rem]"
+          >
+            Shop Now <img src="Assets/icons/arrow-right.svg" alt="arrow icon" />
+          </button>
+          <div
+            class="flex justify-starts items-start flex-wrap w-full mt-10 lg:gap-16 gap-10"
+          >
+            <div>
+              <p class="text-4xl font-palanquin font-bold">1k+</p>
+              <p class="leading-7 font-montserrat text-slate-gray">Brands</p>
+            </div>
+            <div>
+              <p class="text-4xl font-palanquin font-bold">500+</p>
+              <p class="leading-7 font-montserrat text-slate-gray">Shops</p>
+            </div>
+            <div>
+              <p class="text-4xl font-palanquin font-bold">250k+</p>
+              <p class="leading-7 font-montserrat text-slate-gray">Customers</p>
+            </div>
+          </div>
+        </div>
+        <!-- hero right side content -->
+        <div
+          class="lg:absolute lg:top-0 lg:right-0 bg-[url('/Assets/images/collection-background.svg')] bg-no-repeat bg-cover lg:w-[50%] h-screen lg:z-[-10]" 
+        >
+          <div class="w-full h-full flex justify-center items-center">
+            <img class="" src="Assets/images/big-shoe1.png" id="big-shoe-image" />
+          </div>
+        </div>
+        <div class="flex lg:justify-end justify-center items-center gap-8 relative lg:-top-[20rem] -top-16 lg:mr-[8%] pb-10">
+          <!-- thumbnail shoe 1 -->
+          <div
+            class="shoe1 border-2 border-[#FF6452] rounded-lg cursor-pointer lg:w-[160px] w-[100px] lg:h-[160px] h-[90px] bg-[url('/Assets/images/thumbnail-background.svg')] bg-no-repeat bg-cover flex justify-center items-center" onclick="changeShoe(this)"
+          >
+            <img src="Assets/images/thumbnail-shoe1.svg" alt="" />
+          </div>
+          <!-- thumbnail shoe 2 -->
+          <div
+            class="shoe2 cursor-pointer lg:w-[160px] w-[100px] rounded-lg lg:h-[160px] h-[90px] bg-[url('/Assets/images/thumbnail-background.svg')] bg-no-repeat bg-cover flex justify-center items-center" onclick="changeShoe(this)"
+          >
+            <img src="Assets/images/thumbnail-shoe2.svg" alt="" />
+          </div>
+          <!-- thumbnail shoe 3 -->
+          <div
+            class="shoe3 cursor-pointer lg:w-[160px] w-[100px] lg:h-[160px] h-[90px] rounded-lg bg-[url('/Assets/images/thumbnail-background.svg')] bg-no-repeat bg-cover flex justify-center items-center" onclick="changeShoe(this)"
+          >
+            <img src="Assets/images/thumbnail-shoe3.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- hero section end -->
+       <!-- section 3: Our Popular Products -->
       <section class="lg:mt-6 p-5 md:p-8 lg:p-12">
         <div class="mb-12 m-2">
           <h1>
@@ -126,5 +261,7 @@
         </div>
       </section>
     </main>
+
+    <script src="js/change-shoe.js"></script>
   </body>
 </html>
